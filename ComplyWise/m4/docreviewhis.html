@@ -1,0 +1,153 @@
+<html>
+<head>
+    <title>CW - Document Review History</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        .header {
+            background-color: #3b5998;
+            color: white;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .header .logo {
+            font-size: 24px;
+            font-weight: bold;
+            margin-right: 20px;
+        }
+        .header .logo span {
+            color: orange;
+        }
+        .header .search-bar {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-grow: 1;
+        }
+        .header .search-bar input {
+            width: 300px;
+            padding: 5px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        .header .search-bar .fa-search {
+            margin-left: -30px;
+            cursor: pointer;
+        }
+        .header .icons {
+            display: flex;
+            align-items: center;
+        }
+        .header .icons .fa {
+            margin-left: 15px;
+            cursor: pointer;
+        }
+        .breadcrumb {
+            padding: 10px;
+            background-color: #f9f9f9;
+            font-size: 14px;
+        }
+        .breadcrumb a {
+            color: #3b5998;
+            text-decoration: none;
+        }
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+        .content {
+            padding: 20px;
+        }
+        .document-info {
+            background-color: #d3d3d3;
+            padding: 20px;
+            border-radius: 5px;
+        }
+        .document-info p {
+            margin: 5px 0;
+        }
+        .changes-made {
+            background-color: #e0e0e0;
+            padding: 10px;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+        .changes-made table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .changes-made table td {
+            padding: 5px;
+            border-bottom: 1px solid #ccc;
+        }
+        .changes-made table td:last-child {
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <i class="fa fa-arrow-left" onclick="window.history.back();"></i>
+        <div class="logo">Comply<span>Wise</span></div>
+        <div class="search-bar">
+            <input type="text" placeholder="Search">
+            <i class="fa fa-search"></i>
+        </div>
+        <div class="icons">
+            <i class="fa fa-sync-alt"></i>
+            <i class="fa fa-bell"></i>
+            <i class="fa fa-cog"></i>
+        </div>
+    </div>
+    <div class="breadcrumb">
+        <a href="#">Home</a> &gt; <a href="#">Audit Trail Dashboard</a> &gt; Document Review History
+    </div>
+    <div class="content">
+        <div class="document-info">
+            <p>Document ID: 7134</p>
+            <p>Title: Financial Statement</p>
+            <p>Date: 25/11/2024</p>
+            <p>Compliance Status: Compliant</p>
+            <p>Changes Made:</p>
+            <div class="changes-made">
+                <table>
+                    <tr>
+                        <td>Submitted for Compliance Check</td>
+                        <td>11/11/2024</td>
+                    </tr>
+                    <tr>
+                        <td>Check Result: “Non-compliant”</td>
+                        <td>12/11/2024</td>
+                    </tr>
+                    <tr>
+                        <td>Flagged for Review</td>
+                        <td>12/11/2024</td>
+                    </tr>
+                    <tr>
+                        <td>Reviewed by John Smith</td>
+                        <td>13/11/2024</td>
+                    </tr>
+                    <tr>
+                        <td>Edited by John Smith</td>
+                        <td>20/11/2024</td>
+                    </tr>
+                    <tr>
+                        <td>Resubmitted by John Smith</td>
+                        <td>21/11/2024</td>
+                    </tr>
+                    <tr>
+                        <td>Check Result: “Compliant”</td>
+                        <td>25/11/2024</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

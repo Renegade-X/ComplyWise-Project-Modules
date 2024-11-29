@@ -1,0 +1,264 @@
+<html>
+<head>
+    <title>CW - Assign Tasks</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        .header {
+            background-color: #5b7bbf; /* Lightened blue shade */
+            color: white;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .header .logo {
+            font-size: 24px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+        }
+        .header .logo i {
+            margin-right: 10px;
+            font-size: 24px;
+            color: white;
+        }
+        .header .logo span {
+            color: #ff7f50;
+        }
+        .header .search-bar {
+            flex-grow: 1;
+            margin: 0 20px;
+        }
+        .header .search-bar input {
+            width: 80%; /* Shortened the search bar */
+            padding: 5px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        .header .icons {
+            display: flex;
+            align-items: center;
+        }
+        .header .icons i {
+            margin: 0 10px;
+            font-size: 20px;
+            cursor: pointer;
+        }
+        .breadcrumb {
+            padding: 10px;
+            background-color: #f9f9f9;
+            border-bottom: 1px solid #ccc;
+        }
+        .breadcrumb a {
+            color: #5b7bbf; /* Lightened blue shade */
+            text-decoration: none;
+            margin-right: 5px;
+        }
+        .breadcrumb a::after {
+            content: '>';
+            margin-left: 5px;
+        }
+        .breadcrumb a:last-child::after {
+            content: '';
+        }
+        .content {
+            padding: 20px;
+        }
+        .task-table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: #d3e0ff;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        .task-table th, .task-table td {
+            padding: 15px;
+            text-align: left;
+        }
+        .task-table th {
+            background-color: #5b7bbf; /* Lightened blue shade */
+            color: white;
+        }
+        .task-table td {
+            background-color: white;
+            border-bottom: 1px solid #ccc;
+        }
+        .task-row {
+            display: table-row;
+            width: 100%;
+        }
+        .task-row td {
+            display: table-cell;
+            padding: 15px;
+            text-align: left;
+            background-color: white;
+            border-bottom: 1px solid #ccc;
+        }
+        .task-row td:last-child {
+            text-align: right;
+        }
+        .task-row .dropdown {
+            cursor: pointer;
+        }
+        .popup, .dialog {
+            display: none;
+            position: absolute;
+            background-color: white;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            z-index: 1000;
+        }
+        .popup ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .popup ul li {
+            padding: 10px;
+            cursor: pointer;
+        }
+        .popup ul li:hover {
+            background-color: #f0f0f0;
+        }
+        .dialog {
+            width: 300px;
+            text-align: center;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .dialog button {
+            margin: 10px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .dialog .cancel {
+            background-color: #ccc;
+        }
+        .dialog .confirm {
+            background-color: #5b7bbf; /* Lightened blue shade */
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="logo">
+            <i class="fas fa-arrow-left" onclick="window.history.back();"></i>
+            <span style="color: white;">Comply</span><span>Wise</span>
+        </div>
+        <div class="search-bar">
+            <input type="text" placeholder="Search">
+        </div>
+        <div class="icons">
+            <i class="fas fa-undo"></i>
+            <i class="fas fa-bell"></i>
+            <i class="fas fa-cog"></i>
+        </div>
+    </div>
+    <div class="breadcrumb">
+        <a href="#">Home</a>
+        <a href="usermanage.html">User Management</a>
+        <a href="umia.html">User Management Interface</a>
+        <a href="#">Assign Tasks</a>
+    </div>
+    <div class="content">
+        <table class="task-table">
+            <thead>
+                <tr>
+                    <th>Task</th>
+                    <th>Task Weight</th>
+                    <th>Recommended Role</th>
+                    <th>Assigned To</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="task-row">
+                    <td>Check Compliance</td>
+                    <td>2</td>
+                    <td>Compliance Officer</td>
+                    <td><i class="fas fa-chevron-down dropdown"></i></td>
+                </tr>
+                <tr class="task-row">
+                    <td>Review Document</td>
+                    <td>3</td>
+                    <td>Employee</td>
+                    <td><i class="fas fa-chevron-down dropdown"></i></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="popup" id="popup">
+        <h3>Available</h3>
+        <ul>
+            <li id="option1">Dunphy, Phil</li>
+            <li id="option2">Ross, Michael</li>
+        </ul>
+    </div>
+    <div class="dialog" id="dialog">
+        <p>Save changes?</p>
+        <button class="cancel" id="cancel">Cancel</button>
+        <button class="confirm" id="confirm">Confirm</button>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const dropdowns = document.querySelectorAll('.dropdown');
+            const popup = document.getElementById('popup');
+            const dialog = document.getElementById('dialog');
+            let selectedOption = null;
+
+            dropdowns.forEach(dropdown => {
+                dropdown.addEventListener('click', function(event) {
+                    event.stopPropagation();
+                    const rect = dropdown.getBoundingClientRect();
+                    popup.style.display = 'block';
+                    popup.style.top = `${rect.top + window.scrollY}px`;
+                    popup.style.left = `${rect.left + window.scrollX - popup.offsetWidth}px`;
+                });
+            });
+
+            document.addEventListener('click', function() {
+                popup.style.display = 'none';
+                dialog.style.display = 'none';
+            });
+
+            popup.addEventListener('click', function(event) {
+                event.stopPropagation();
+            });
+
+            document.getElementById('option1').addEventListener('click', function(event) {
+                event.stopPropagation();
+                selectedOption = 'Dunphy, Phil';
+                dialog.style.display = 'block';
+            });
+
+            document.getElementById('option2').addEventListener('click', function(event) {
+                event.stopPropagation();
+                selectedOption = 'Ross, Michael';
+                dialog.style.display = 'block';
+            });
+
+            document.getElementById('cancel').addEventListener('click', function(event) {
+                event.stopPropagation();
+                dialog.style.display = 'none';
+            });
+
+            document.getElementById('confirm').addEventListener('click', function(event) {
+                event.stopPropagation();
+                alert(`Changes saved for ${selectedOption}`);
+                dialog.style.display = 'none';
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,151 @@
+<html>
+<head>
+    <title>User Management Interface</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('cmplywis.PNG') no-repeat center center fixed;
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+        .header {
+            background-color: #4a90e2;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .header .logo {
+            font-size: 24px;
+            color: #fff;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+        }
+        .header .logo span {
+            color: #f5a623;
+        }
+        .header .logo .fa-arrow-left {
+            margin-right: 10px;
+        }
+        .header .search-bar {
+            display: flex;
+            align-items: center;
+            flex-grow: 1;
+            justify-content: center;
+        }
+        .header .search-bar input {
+            padding: 5px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            margin-right: 10px;
+            width: 300px;
+        }
+        .header .search-bar .fa-search {
+            color: #fff;
+            font-size: 18px;
+        }
+        .header .icons {
+            display: flex;
+            align-items: center;
+        }
+        .header .icons .fa {
+            color: #fff;
+            font-size: 18px;
+            margin-left: 15px;
+        }
+        .breadcrumb {
+            padding: 10px 20px;
+            background-color: #fff;
+            border-bottom: 1px solid #ccc;
+        }
+        .breadcrumb a {
+            color: #000;
+            text-decoration: none;
+            margin-right: 5px;
+        }
+        .breadcrumb a::after {
+            content: '>';
+            margin-left: 5px;
+        }
+        .breadcrumb a:last-child::after {
+            content: '';
+        }
+        .content {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: calc(100vh - 100px);
+        }
+        .row {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        .card {
+            width: 180px;
+            height: 180px;
+            background-color: #e0e0e0;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 10px;
+        }
+        .card .circle {
+            width: 160px;
+            height: 160px;
+            background-color: #4a90e2;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="logo">
+            <i class="fas fa-arrow-left" onclick="window.history.back();"></i>
+            Comply<span>Wise</span>
+        </div>
+        <div class="search-bar">
+            <input type="text" placeholder="Search">
+            <i class="fas fa-search"></i>
+        </div>
+        <div class="icons">
+            <i class="fas fa-undo" style="color: #fff; margin-left: 10px;"></i>
+            <i class="fas fa-bell" style="color: #fff; margin-left: 10px;"></i>
+            <i class="fas fa-cog" style="color: #fff; margin-left: 10px;"></i>
+        </div>
+    </div>
+    <div class="breadcrumb">
+        <a href="#">Home</a>
+        <a href="usermanage.html">User Management</a>
+        <a href="#">User Management Interface</a>
+    </div>
+    <div class="content">
+        <div class="row">
+            <div class="card">
+                <div class="circle" onclick="window.location.href='manageroles.html';">Manage Roles</div>
+            </div>
+            <div class="card">
+                <div class="circle" onclick="window.location.href='taskassign.html';">Assign Tasks</div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="card">
+                <div class="circle" onclick="window.location.href='useractivity.html';">View User Activity</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

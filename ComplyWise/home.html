@@ -1,0 +1,120 @@
+<html>
+<head>
+    <title>ComplyWise</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('cmplywis.PNG') no-repeat center center fixed;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .header {
+            background-color: rgba(106, 160, 230, 0.9);
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            position: absolute;
+            top: 0;
+        }
+        .header .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #ffffff;
+        }
+        .header .logo span {
+            color: #ff7f50;
+        }
+        .header .search-bar {
+            display: flex;
+            align-items: center;
+        }
+        .header .search-bar input {
+            padding: 5px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+        }
+        .header .search-bar button {
+            background-color: #ffffff;
+            border: none;
+            padding: 5px 10px;
+            margin-left: 5px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .header .icons {
+            display: flex;
+            align-items: center;
+        }
+        .header .icons i {
+            color: #ffffff;
+            font-size: 20px;
+            margin-left: 15px;
+            cursor: pointer;
+        }
+        .content {
+            text-align: center;
+        }
+        .content .home-link {
+            font-size: 18px;
+            margin-bottom: 20px;
+            display: block;
+            color: #ffffff;
+        }
+        .content .welcome-box {
+            background-color: rgba(211, 211, 211, 0.9);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            max-width: 300px;
+            margin: 0 auto;
+        }
+        .content .welcome-box h2 {
+            margin-top: 0;
+        }
+        .content .welcome-box button {
+            background-color: #6aa0e6;
+            color: #ffffff;
+            border: none;
+            padding: 10px 20px;
+            margin: 10px 0;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            width: 100%;
+            max-width: 250px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="logo">Comply<span>Wise</span></div>
+        <div class="search-bar">
+            <input type="text" placeholder="Search">
+            <button><i class="fas fa-search"></i></button>
+        </div>
+        <div class="icons">
+            <i class="fas fa-undo"></i>
+            <i class="fas fa-bell"></i>
+            <i class="fas fa-cog"></i>
+        </div>
+    </div>
+    <div class="content">
+        <a href="#" class="home-link">Home</a>
+        <div class="welcome-box">
+            <h2>Welcome to ComplyWise</h2>
+            <button onclick="window.location.href= 'm4\\audittraildash.html';">Audit Trail Dashboard</button>
+            <button onclick="window.location.href= 'm7\\usermanage.html';">User Management</button>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,136 @@
+<html>
+<head>
+    <title>CW - Employee Interface</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('cmplywis.PNG') no-repeat center center fixed;
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+        .header {
+            background-color: #6aa9ff;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 2px solid #004080;
+        }
+        .header .logo-container {
+            display: flex;
+            align-items: center;
+        }
+        .header .logo-container .fa-arrow-left {
+            color: #ffffff;
+            font-size: 20px;
+            margin-right: 10px;
+            cursor: pointer;
+        }
+        .header .logo {
+            font-size: 24px;
+            color: #ffffff;
+            font-weight: bold;
+        }
+        .header .logo span {
+            color: #ff8c00;
+        }
+        .header .search-bar {
+            display: flex;
+            align-items: center;
+        }
+        .header .search-bar input {
+            padding: 5px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+        }
+        .header .search-bar button {
+            background-color: #6aa0e6;
+            border: none;
+            color: white;
+            padding: 5px 10px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-left: 5px;
+        }
+        .header .icons {
+            display: flex;
+            align-items: center;
+        }
+        .header .icons i {
+            font-size: 24px;
+            color: white;
+            margin-left: 15px;
+            cursor: pointer;
+        }
+        .breadcrumb {
+            margin: 20px;
+            font-size: 16px;
+        }
+        
+        .content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: calc(100vh - 100px);
+        }
+        .content .card {
+            background-color: #e0e0e0;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 10px;
+            text-align: center;
+            width: 200px;
+            height: 200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .content .card .circle {
+            background-color: #6aa9ff;
+            border-radius: 50%;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #ffffff;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="logo-container">
+            <i class="fas fa-arrow-left" onclick="window.history.back()"></i>
+            <div class="logo">Comply<span>Wise</span></div>
+        </div>
+        <div class="search-bar">
+            <input type="text" placeholder="Search">
+            <i class="fas fa-search"></i>
+        </div>
+        <div class="icons">
+            <i class="fas fa-undo"></i>
+            <i class="fas fa-bell"></i>
+            <i class="fas fa-cog"></i>
+        </div>
+    </div>
+    <div class="breadcrumb">
+        Home > User Management > User Management Interface
+    </div>
+    <div class="content">
+        <div class="card">
+            <div class="circle" onclick="window.location.href='notif.html';">Notification Settings</div>
+        </div>
+        <div class="card">
+            <div class="circle" onclick="window.location.href='securityset.html';">Security Settings</div>
+        </div>
+    </div>
+</body>
+</html>

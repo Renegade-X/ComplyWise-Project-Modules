@@ -1,0 +1,124 @@
+<html>
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .header {
+            background-color: #4a90e2;
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+            width: 100%;
+            position: absolute;
+            top: 0;
+        }
+        .header .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: white;
+            margin-right: 20px;
+        }
+        .header .logo span {
+            color: #ff7f50;
+        }
+        .header .search-bar {
+            flex-grow: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .header .search-bar input {
+            width: 300px;
+            padding: 5px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        .header .icons {
+            display: flex;
+            align-items: center;
+        }
+        .header .icons i {
+            font-size: 20px;
+            margin-left: 15px;
+            cursor: pointer;
+        }
+        .header .back-icon {
+            margin-right: 15px;
+        }
+        .breadcrumb {
+            padding: 10px 20px;
+            background-color: #fff;
+            border-bottom: 1px solid #ddd;
+            width: 100%;
+            position: absolute;
+            top: 50px;
+        }
+        .breadcrumb a {
+            color: #333;
+            text-decoration: none;
+            margin-right: 5px;
+        }
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+        .breadcrumb span {
+            margin-right: 5px;
+        }
+        .content {
+            text-align: center;
+            margin-top: 100px;
+        }
+        .content button {
+            background-color: #7fb3ff;
+            color: white;
+            border: none;
+            padding: 20px 40px;
+            margin: 15px 0;
+            border-radius: 10px;
+            font-size: 20px;
+            cursor: pointer;
+            width: 350px;
+        }
+        .content button:hover {
+            background-color: #6aa8ff;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <i class="fas fa-arrow-left back-icon" onclick="window.history.back();"></i>
+        <div class="logo">Comply<span>Wise</span></div>
+        <div class="search-bar">
+            <input type="text" placeholder="Search">
+            <i class="fas fa-search"></i>
+        </div>
+        <div class="icons">
+            <i class="fas fa-sync-alt"></i>
+            <i class="fas fa-bell"></i>
+            <i class="fas fa-cog"></i>
+        </div>
+    </div>
+    <div class="breadcrumb">
+        <a href="#">Home</a> >
+        <a href="usermanage.html">User Management</a> >
+        <a href="umie.html">User Management Interface</a> >
+        <span>Password Settings</span>
+    </div>
+    <div class="content">
+        <button onclick="window.location.href='passwordset.html';">Reset Password</button><br>
+        <button onclick="window.location.href='passwordset.html';">Change Password</button><br>
+        <button>Privacy Settings</button><br>
+        <button>General Settings</button>
+    </div>
+</body>
+</html>

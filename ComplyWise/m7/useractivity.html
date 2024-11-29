@@ -1,0 +1,179 @@
+<html>
+<head>
+    <title>ComplyWise - User Management</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        .header {
+            background-color: #4a90e2;
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .header .logo {
+            font-size: 24px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+        }
+        .header .logo span {
+            color: #ff7f50;
+        }
+        .header .logo .fa-arrow-left {
+            margin-right: 10px;
+            color: white;
+            cursor: pointer;
+        }
+        .header .search-bar {
+            display: flex;
+            align-items: center;
+        }
+        .header .search-bar input {
+            padding: 5px;
+            border: none;
+            border-radius: 3px;
+            width: 200px; /* Increased width */
+        }
+        .header .search-bar .fa-search {
+            margin-left: 5px;
+            color: white;
+        }
+        .header .icons {
+            display: flex;
+            align-items: center;
+        }
+        .header .icons .fa {
+            margin-left: 15px;
+            color: white;
+            cursor: pointer;
+        }
+        .breadcrumb {
+            padding: 10px 20px;
+            background-color: #e0e0e0;
+            font-size: 14px;
+        }
+        .breadcrumb a {
+            color: #4a90e2;
+            text-decoration: none;
+        }
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+        .content {
+            padding: 20px;
+        }
+        .table-container {
+            background-color: #d3d3d3;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: #4a90e2;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+        .table th, .table td {
+            padding: 10px;
+            text-align: left;
+        }
+        .table th {
+            background-color: #4a90e2;
+            color: white;
+        }
+        .table td {
+            background-color: white;
+        }
+        .table .row {
+            display: table-row;
+            width: 100%;
+            background-color: white;
+            border: 1px solid #d3d3d3; /* Add boundary to each row */
+        }
+        .table .row .cell {
+            display: table-cell;
+            padding: 10px;
+        }
+        .table .row .cell:last-child {
+            text-align: right;
+        }
+        .table .row .fa-chevron-down {
+            color: #4a90e2;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="logo">
+            <i class="fa fa-arrow-left" onclick="window.history.back();"></i>
+            <span style="color: white;">Comply</span><span style="color: #ff7f50;">Wise</span>
+        </div>
+        <div class="search-bar">
+            <input type="text" placeholder="Search">
+            <i class="fa fa-search"></i>
+        </div>
+        <div class="icons">
+            <i class="fa fa-undo"></i>
+            <i class="fa fa-bell"></i>
+            <i class="fa fa-cog"></i>
+        </div>
+    </div>
+    <div class="breadcrumb">
+        <a href="#">Home</a> > <a href="usermanage.html">User Management</a> > <a href="umia.html">User Management Interface</a> > View User Activity
+    </div>
+    <div class="content">
+        <div class="table-container">
+            <table class="table">
+                <thead>
+                    <tr style="background-color: #4a90e2; color: white;">
+                        <th>Employee ID</th>
+                        <th>Employee Name</th>
+                        <th>Role</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="row" onclick="window.location.href='viewactivity.html';">
+                        <td class="cell">713</td>
+                        <td class="cell">Brandon, Jeff</td>
+                        <td class="cell">Employee</td>
+                        <td class="cell"><i class="fa fa-chevron-down"></i></td>
+                    </tr>
+                    <tr class="row" onclick="window.location.href='viewactivity.html';">
+                        <td class="cell">987</td>
+                        <td class="cell">Ross, Micheal</td>
+                        <td class="cell">Employee</td>
+                        <td class="cell"><i class="fa fa-chevron-down"></i></td>
+                    </tr>
+                    <tr class="row" onclick="window.location.href='viewactivity.html';">
+                        <td class="cell">123</td>
+                        <td class="cell">Rascalov, Dimitri</td>
+                        <td class="cell">Compliance Officer/Reviewer</td>
+                        <td class="cell"><i class="fa fa-chevron-down"></i></td>
+                    </tr>
+                    <tr class="row" onclick="window.location.href='viewactivity.html';">
+                        <td class="cell">341</td>
+                        <td class="cell">Dunphy, Phil</td>
+                        <td class="cell">Compliance Officer/Reviewer</td>
+                        <td class="cell"><i class="fa fa-chevron-down"></i></td>
+                    </tr>
+                    <tr class="row" onclick="window.location.href='viewactivity.html';">
+                        <td class="cell">555</td>
+                        <td class="cell">Spectre, Harvey</td>
+                        <td class="cell">Employee</td>
+                        <td class="cell"><i class="fa fa-chevron-down"></i></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

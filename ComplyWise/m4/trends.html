@@ -1,0 +1,159 @@
+<html>
+ <head>
+  <title>
+   CW - Compliance Trends
+  </title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .header {
+            background-color: #3b5998;
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .header .logo {
+            font-size: 24px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+        }
+        .header .logo span {
+            color: #ff6600;
+        }
+        .header .search-bar {
+            display: flex;
+            align-items: center;
+            flex-grow: 1;
+            justify-content: center;
+        }
+        .header .search-bar input {
+            padding: 5px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            margin-right: 10px;
+        }
+        .header .search-bar i {
+            color: #3b5998;
+            background-color: white;
+            padding: 5px;
+            border-radius: 50%;
+        }
+        .header .icons {
+            display: flex;
+            align-items: center;
+        }
+        .header .icons i {
+            margin-left: 15px;
+            font-size: 20px;
+            cursor: pointer;
+        }
+        .breadcrumb {
+            padding: 10px 20px;
+            background-color: white;
+            border-bottom: 1px solid #ccc;
+        }
+        .breadcrumb a {
+            color: #3b5998;
+            text-decoration: none;
+        }
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+        .content {
+            padding: 20px;
+        }
+        .chart-container {
+            background-color: #e0e0e0;
+            padding: 20px;
+            border-radius: 5px;
+        }
+        .chart-container h2 {
+            margin-top: 0;
+        }
+        .chart {
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="header">
+   <i class="fas fa-arrow-left" onclick="window.history.back();" margin-right: 15px;>
+   </i>
+   <div class="logo">
+    Comply
+    <span>
+     Wise
+    </span>
+   </div>
+   <div class="search-bar">
+    <input placeholder="Search" type="text"/>
+    <i class="fas fa-search">
+    </i>
+   </div>
+   <div class="icons">
+    <i class="fas fa-sync-alt">
+    </i>
+    <i class="fas fa-bell">
+    </i>
+    <i class="fas fa-cog">
+    </i>
+   </div>
+  </div>
+  <div class="breadcrumb">
+   <a href="#">
+    Home
+   </a>
+   &gt;
+   <a href="#">
+    Audit Trail Dashboard
+   </a>
+   &gt; Compliance Trends Visualisation
+  </div>
+  <div class="content">
+   <div class="chart-container">
+    <h2>
+     Documents Reviewed (Current Year):
+    </h2>
+    <div class="chart">
+     <canvas id="myChart" width="600" height="300"></canvas>
+    </div>
+   </div>
+  </div>
+  <script>
+   var ctx = document.getElementById('myChart').getContext('2d');
+        var myChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep'],
+                datasets: [{
+                    label: 'Documents Reviewed',
+                    data: [30, 50, 45, 50, 60, 70, 80, 90, 150],
+                    backgroundColor: 'rgba(54, 162, 235, 0.2)',
+                    borderColor: 'rgba(54, 162, 235, 1)',
+                    borderWidth: 2,
+                    fill: false,
+                    tension: 0.1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+  </script>
+ </body>
+</html>

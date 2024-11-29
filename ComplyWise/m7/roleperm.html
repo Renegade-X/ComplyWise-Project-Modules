@@ -1,0 +1,161 @@
+<html>
+<head>
+    <title>ComplyWise - Role Permissions</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        .header {
+            background-color: #3399ff;
+            color: white;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .header .logo {
+            font-size: 24px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            margin-right: auto;
+        }
+        .header .logo .comply {
+            color: white;
+        }
+        .header .logo .wise {
+            color: #ff6600;
+        }
+        .header .back-icon {
+            font-size: 24px;
+            margin-right: 10px;
+            cursor: pointer;
+        }
+        .header .search-bar {
+            flex-grow: 1;
+            max-width: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto;
+        }
+        .header .search-bar input {
+            width: 100%;
+            padding: 5px;
+            font-size: 16px;
+        }
+        .header .search-bar i {
+            margin-left: -30px;
+            cursor: pointer;
+        }
+        .header .icons {
+            display: flex;
+            align-items: center;
+        }
+        .header .icons i {
+            font-size: 20px;
+            margin-left: 15px;
+            cursor: pointer;
+        }
+        .breadcrumb {
+            padding: 10px 20px;
+            background-color: #e0e0e0;
+            font-size: 14px;
+        }
+        .breadcrumb a {
+            color: #2d3e50;
+            text-decoration: none;
+        }
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+        .container {
+            padding: 20px;
+        }
+        .roles {
+            display: flex;
+            justify-content: space-between;
+            background-color: #3399ff;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .role {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            width: 30%;
+        }
+        .role h3 {
+            text-align: center;
+            margin-top: 0;
+        }
+        .role ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+        .role ul li {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <i class="fas fa-arrow-left back-icon" onclick="window.history.back();"></i>
+        <div class="logo">
+            <span class="comply">Comply</span><span class="wise">Wise</span>
+        </div>
+        <div class="search-bar">
+            <input type="text" placeholder="Search">
+            <i class="fas fa-search"></i>
+        </div>
+        <div class="icons">
+            <i class="fas fa-sync-alt"></i>
+            <i class="fas fa-cog"></i>
+            <i class="fas fa-bell"></i>
+        </div>
+    </div>
+    <div class="breadcrumb">
+        <a href="#">Home</a> &gt; <a href="#">User Management</a> &gt; <a href="#">User Management Interface</a> &gt; <a href="#">Manage Roles</a> &gt; Role Permissions
+    </div>
+    <div class="container">
+        <div class="roles">
+            <div class="role">
+                <h3>Admin</h3>
+                <ul>
+                    <li>Manage user accounts (add, edit, disable, or delete users).</li>
+                    <li>Assign and modify roles (grant permissions to Users, Reviewers, or Admins).</li>
+                    <li>View and edit system settings, including compliance rules and audit parameters.</li>
+                    <li>Access detailed compliance reports for all users.</li>
+                    <li>Resolve flagged documents and override Reviewer decisions if necessary.</li>
+                    <li>Monitor system logs and security alerts.</li>
+                </ul>
+            </div>
+            <div class="role">
+                <h3>Compliance Officer/Reviewer</h3>
+                <ul>
+                    <li>Review flagged documents for compliance violations.</li>
+                    <li>Provide feedback or request corrections from users on flagged documents.</li>
+                    <li>Approve or reject resubmitted documents after review.</li>
+                    <li>Access and manage compliance-related notifications and alerts.</li>
+                    <li>Generate compliance reports for reviewed documents.</li>
+                    <li>No permissions to edit roles, users, or system settings.</li>
+                </ul>
+            </div>
+            <div class="role">
+                <h3>Employee</h3>
+                <ul>
+                    <li>Submit documents for compliance checks.</li>
+                    <li>View flagged documents and address issues by resubmitting corrected versions.</li>
+                    <li>Access notifications related to their document submissions and account activities.</li>
+                    <li>Manage personal account settings (e.g., update profile, change password, set notification preferences).</li>
+                    <li>No permissions to access or manage other users, roles, or system settings.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
